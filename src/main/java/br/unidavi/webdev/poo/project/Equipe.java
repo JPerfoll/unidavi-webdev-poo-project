@@ -3,6 +3,7 @@ package br.unidavi.webdev.poo.project;
 import br.unidavi.webdev.poo.project.Atleta;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Equipe extends Competidor {
     
@@ -19,10 +20,6 @@ public class Equipe extends Competidor {
 
     public List<Atleta> getJogadores() {
         return jogadores;
-    }
-
-    private void setJogadores(List<Atleta> jogadores) {
-        this.jogadores = jogadores;
     }
 
     public Equipe(List<Atleta> jogadores, String nome, String apelido, int idade) {
@@ -54,12 +51,10 @@ public class Equipe extends Competidor {
     }
     
     public void listaAtletas() {
-        System.out.println("        Listando os atletas:");
-        int i = 1;
+        Logger.getGlobal().info("        Listando os atletas:");
         
         for (Atleta a : jogadores) {
-            System.out.println("            Atleta " + i + ": " + a.getNome());
-            i++;
+            Logger.getGlobal().info("            Atleta: " + a.getNome());
         }
     }
 }

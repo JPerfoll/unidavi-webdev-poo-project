@@ -3,6 +3,7 @@ package br.unidavi.webdev.poo.project;
 import br.unidavi.webdev.poo.project.Competidor;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Modalidade {
  
@@ -19,10 +20,6 @@ public class Modalidade {
 
     public String getDescricao() {
         return descricao;
-    }
-
-    private void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
     
     public void adicionaAtleta(Atleta atleta) {
@@ -42,18 +39,18 @@ public class Modalidade {
     }
     
     public void listaCompetidores() {
-        System.out.println("    Competidores dessa modalidade: ");
+        Logger.getGlobal().info("    Competidores dessa modalidade: ");
         int i = 1;
         
         for (Atleta a : atletas) {
-            System.out.println("        Atleta " + i + ": " + a.getNome());
+            Logger.getGlobal().info("        Atleta: " + a.getNome());
             i++;
         }
         
         int j = 1;
         
         for (Equipe e : equipes) {
-            System.out.println("        Equipe " + j + ": " + e.getNome());
+            Logger.getGlobal().info("        Equipe: " + e.getNome());
             e.listaAtletas();
             j++;
         }

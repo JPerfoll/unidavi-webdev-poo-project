@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import br.unidavi.webdev.poo.project.Modalidade;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Evento {
     private String descricao;
@@ -12,10 +13,6 @@ public class Evento {
 
     public String getDescricao() {
         return descricao;
-    }
-
-    private void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public Date getData() {
@@ -28,10 +25,6 @@ public class Evento {
 
     public List<Modalidade> getModalidades() {
         return modalidades;
-    }
-
-    private void setModalidades(List<Modalidade> modalidades) {
-        this.modalidades = modalidades;
     }
 
     public Evento(String descricao, Date data) {
@@ -58,8 +51,8 @@ public class Evento {
     
     public Boolean alteraDataEvento(String novaData) {
         try {
-            Date data = new Date(novaData);
-            this.setData(data);
+            Date dataNova = new Date(novaData);
+            this.setData(dataNova);
             return true;
         } catch (Exception e) {
             return false;
@@ -75,13 +68,13 @@ public class Evento {
     }
     
     public void listaModalidades() {
-        System.out.println("");
-        System.out.println("Listando as modalidades do evento " + this.getDescricao() + ":");
+        Logger.getGlobal().info("");
+        Logger.getGlobal().info("Listando as modalidades do evento " + this.getDescricao() + ":");
         int i = 1;
         
         for (Modalidade m : modalidades) {
-            System.out.println("");
-            System.out.println("    Modalidade " + i + ": " + m.getDescricao());
+            Logger.getGlobal().info("");
+            Logger.getGlobal().info("    Modalidade: " + m.getDescricao());
             m.listaCompetidores();
             i++;
         }
