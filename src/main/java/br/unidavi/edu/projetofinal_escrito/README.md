@@ -59,3 +59,9 @@ Estarei desenvolvendo e adicionando os testes para a segunda entrega do projeto.
 
 O penúltimo commit solicitado foi "Criar um commit com resolução de todas as issues relatadas pelo sonarqube". Porém todas as issues já foram resolvidas em um commit anterior.
 Parágrafo sendo alterado apenas para enviar um commit para o GitHub.
+
+------------------------
+
+O último commit solicitado foi "commit com revisão de código de cada classe conforme ferramenta de inspeção criada na semana 1".
+Todas as classes ja foram inicialmente desenvolvidas no padrão da ferramenta de inspeção que criamos na primeira semana. Já me preocupei em seguir todos os passos e checklists.
+Parágrafo sendo alterado apenas para enviar um commit para o GitHub.
