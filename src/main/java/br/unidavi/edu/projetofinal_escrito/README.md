@@ -55,4 +55,7 @@ Apenas para mostrar que funciona da outra forma também.
 Na primeira entrega não foram feitos testes, achei que não eram necessários. 
 Estarei desenvolvendo e adicionando os testes para a segunda entrega do projeto.
 
-"Para o segundo commit que foi solicitado atualizando o README.md:  não houveram mudanças no projeto, portanto estou adicionando somente este parágrafo".
+------------------------
+
+O penúltimo commit solicitado foi "Criar um commit com resolução de todas as issues relatadas pelo sonarqube". Porém todas as issues já foram resolvidas em um commit anterior.
+Parágrafo sendo alterado apenas para enviar um commit para o GitHub.
