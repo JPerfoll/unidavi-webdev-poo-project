@@ -30,8 +30,8 @@ public class Equipe extends Competidor {
     public Equipe(String nome, String apelido, int idade) {
         super(nome, apelido, idade);
         
-        jogadores = new ArrayList<Atleta>();
-    }    
+        jogadores = new ArrayList<>();
+    }     
 
     public void adicionaAtleta(Atleta atleta) {
         jogadores.add(atleta);

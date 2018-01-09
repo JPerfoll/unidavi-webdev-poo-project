@@ -3,6 +3,7 @@ package br.unidavi.webdev.poo.project;
 import java.util.Date;
 import java.util.List;
 import br.unidavi.webdev.poo.project.Modalidade;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
@@ -31,7 +32,7 @@ public class Evento {
         this.descricao = descricao;
         this.data = data;
         
-        modalidades = new ArrayList<Modalidade>();
+        modalidades = new ArrayList<>();
     }
 
     public Evento(String descricao, Date data, List<Modalidade> modalidades) {
@@ -51,7 +52,8 @@ public class Evento {
     
     public Boolean alteraDataEvento(String novaData) {
         try {
-            Date dataNova = new Date(novaData);
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            Date dataNova = formato.parse(novaData);
             this.setData(dataNova);
             return true;
         } catch (Exception e) {
@@ -70,13 +72,11 @@ public class Evento {
     public void listaModalidades() {
         Logger.getGlobal().info("");
         Logger.getGlobal().info("Listando as modalidades do evento " + this.getDescricao() + ":");
-        int i = 1;
         
         for (Modalidade m : modalidades) {
             Logger.getGlobal().info("");
             Logger.getGlobal().info("    Modalidade: " + m.getDescricao());
             m.listaCompetidores();
-            i++;
         }
     }
 }

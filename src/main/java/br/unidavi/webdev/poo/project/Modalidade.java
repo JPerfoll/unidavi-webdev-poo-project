@@ -1,6 +1,5 @@
 package br.unidavi.webdev.poo.project;
 
-import br.unidavi.webdev.poo.project.Competidor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -14,8 +13,8 @@ public class Modalidade {
     public Modalidade(String descricao) {
         this.descricao = descricao;
         
-        atletas = new ArrayList<Atleta>();
-        equipes = new ArrayList<Equipe>();
+        atletas = new ArrayList<>();
+        equipes = new ArrayList<>();
     }  
 
     public String getDescricao() {
@@ -40,19 +39,14 @@ public class Modalidade {
     
     public void listaCompetidores() {
         Logger.getGlobal().info("    Competidores dessa modalidade: ");
-        int i = 1;
         
         for (Atleta a : atletas) {
             Logger.getGlobal().info("        Atleta: " + a.getNome());
-            i++;
         }
-        
-        int j = 1;
         
         for (Equipe e : equipes) {
             Logger.getGlobal().info("        Equipe: " + e.getNome());
             e.listaAtletas();
-            j++;
         }
     }
 }

@@ -3,28 +3,28 @@ package br.unidavi.webdev.poo.project;
 import java.util.Date;
 import br.unidavi.webdev.poo.project.Evento;
 import br.unidavi.webdev.poo.project.Modalidade;
-import br.unidavi.webdev.poo.project.Competidor;
 import br.unidavi.webdev.poo.project.Atleta;
 import br.unidavi.webdev.poo.project.Equipe;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 public class TesteTrabalhoFinalOO {
     
-    public static void main(String[] args) {
-        Date data = new Date("12/07/2017");
-        
-        
-        
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        Date data = formato.parse("12/07/2017");
+
         /* Exemplo de criação de Evento adicionando uma lista de modalidades */
         Evento evento = new Evento("Rio 2016 - Dia 1", data);
         
-        List<Modalidade> modalidades = new ArrayList<Modalidade>();
+        List<Modalidade> modalidades = new ArrayList<>();
         
         /* Essa competição é individual, portanto adiciona uma lista de atletas */
         Modalidade modalidade = new Modalidade("100M rasos");
-        List<Atleta> atletas = new ArrayList<Atleta>();
+        List<Atleta> atletas = new ArrayList<>();
         
         Atleta atleta1 = new Atleta("João Carlos", "Perna Longa", 28);
         Atleta atleta2 = new Atleta("Pedro Paulo", "Tonico", 31);
@@ -41,7 +41,7 @@ public class TesteTrabalhoFinalOO {
         
         /* Essa competição é em time, portanto adiciona um time e adiciona atletas ao time */
         Modalidade modalidade2 = new Modalidade("Voleibol");
-        List<Equipe> equipes = new ArrayList<Equipe>();
+        List<Equipe> equipes = new ArrayList<>();
         
         Equipe equipe1 = new Equipe("Holanda", "Laranja Mecânica", 102);
         equipe1.adicionaAtleta(new Atleta("João", "Canário", 35));
