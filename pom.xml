@@ -40,6 +40,7 @@
     </dependencies>
     
     <properties>
+        <project.report.outputEncoding>UTF-8</project.report.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
