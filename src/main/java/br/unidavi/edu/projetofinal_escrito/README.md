@@ -52,6 +52,7 @@ um (Linha 79). Porém na linha 84 foi adicionado um exemplo de como adicionar um
 instanciando ela diretamente no construtor e logo na linha seguinte listando as modalidades do evento.
 Apenas para mostrar que funciona da outra forma também.
 
-Na primeira entrega não foram feitos testes, achei que não eram necessários. Estarei
+Na primeira entrega não foram feitos testes, achei que não eram necessários. 
+Estarei desenvolvendo e adicionando os testes para a segunda entrega do projeto.
 
-desenvolvendo e adicionando os testes para a segunda entrega do projeto.
+"Para o segundo commit que foi solicitado atualizando o README.md:  não houveram mudanças no projeto, portanto estou adicionando somente este parágrafo".
